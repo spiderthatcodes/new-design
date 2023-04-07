@@ -1,12 +1,14 @@
 import styled from 'styled-components'
+import { colors } from '../../resources/theme';
 
 export const Container = styled.div`
     width: 100%;
-    background-color: #1e1e1e;
+    background-color: ${colors.black};
     position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
+    font-family: 'Source Sans Pro', sans-serif;
 `;
 
 export const Content = styled.div`
@@ -14,9 +16,3 @@ export const Content = styled.div`
     padding: ${props => props.isMobile ? '10px' : '20px 80px'};
     margin: ${props => props.isMobile ? 0 :  'auto'};
 `;
-
-// fbfaf9
-
-// bbb4ab
-
-// dec2ba - peach

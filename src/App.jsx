@@ -24,10 +24,18 @@ const App = () => {
             path='/'
             element={<Home isMobile={isMobile} />}
         />
-        {/* <Route
+        <Route
             path='/about'
-            element={<About />}
-        /> */}
+            element={<Home isMobile={isMobile} />}
+        />
+        <Route
+            path='/work'
+            element={<Home isMobile={isMobile} />}
+        />
+        <Route
+            path='/contact'
+            element={<Home isMobile={isMobile} />}
+        />
     </Routes>
 </Router>
   );
