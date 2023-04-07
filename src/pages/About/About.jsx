@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '../../components/Layout/Layout';
 
-const Home = ({ isMobile }) => {
+const About = ({ isMobile }) => {
     return (
         <Layout isMobile={isMobile}>
-            {/* <h1>Testing process</h1> */}
+            <h1>About</h1>
         </Layout>
     );
 };
 
-export default Home;
+export default About;
