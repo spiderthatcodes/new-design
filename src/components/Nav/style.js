@@ -17,11 +17,14 @@ export const Container = styled.div`
     }
 
     a {
-        color: ${colors.black};
-        text-shadow: 0px 0px 3px ${colors.white};
+        color: ${colors.white};
         font-size: 25px;
         padding: 12px 16px;
         text-decoration: none;
+    }
+
+    a:hover {
+        text-shadow: 0px 0px 15px ${colors.peach};
     }
 `;
 
