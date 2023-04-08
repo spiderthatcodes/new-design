@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import { colors } from '../../resources/theme';
 
+
 export const Container = styled.div`
     max-width: 1240px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 
     .mobile {
         margin: 0;
@@ -16,8 +18,8 @@ export const Container = styled.div`
 
     a {
         color: ${colors.black};
-        text-shadow: 2px 2px 7px ${colors.white};
-        font-size: 24px;
+        text-shadow: 0px 0px 3px ${colors.white};
+        font-size: 25px;
         padding: 12px 16px;
         text-decoration: none;
     }

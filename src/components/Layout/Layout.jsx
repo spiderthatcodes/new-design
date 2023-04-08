@@ -3,7 +3,8 @@ import Nav from '../Nav/Nav';
 import { Container, Content } from './style';
 
 const Layout = ({ children, isMobile }) => {
-    return (<Container>
+    return (
+    <Container>
         <Nav isMobile={isMobile} />
         <Content isMobile={isMobile}>{children}</Content>
     </Container>

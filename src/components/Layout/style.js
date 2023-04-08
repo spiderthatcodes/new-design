@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '../../resources/theme';
 
+
 export const Container = styled.div`
     width: 100%;
     background-color: ${colors.black};
@@ -9,6 +10,7 @@ export const Container = styled.div`
     left: 0;
     height: 100vh;
     font-family: 'Source Sans Pro', sans-serif;
+    
 `;
 
 export const Content = styled.div`
