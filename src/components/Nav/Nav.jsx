@@ -1,9 +1,15 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import alternate from '../../resources/alternate.png';
-import { Container, Logo, DropButton, Dropdown, DropdownContent } from './style';
+import {
+    Container,
+    Logo,
+    DropButton,
+    Dropdown,
+    DropdownContent,
+} from './style';
 
-const Nav = ({ isMobile }) => {
+const Nav = ({ isMobile, setVisibleSkills }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const firstTwoLinks = (
         <>
@@ -21,20 +27,22 @@ const Nav = ({ isMobile }) => {
         <Container className={isMobile ? 'mobile' : ''}>
             {!isMobile && firstTwoLinks}
             <Logo
+                onMouseLeave={() => setVisibleSkills(0)}
+                onMouseOver={() => setVisibleSkills(4)}
                 src={alternate}
                 alt='J.D.'
             />
             {isMobile && (
                 <Dropdown className={dropdownOpen ? 'open' : ''}>
-                <DropButton
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
-                    className={dropdownOpen ? 'open' : ''}
-                >
-                    &#9776;
-                </DropButton>
-                <DropdownContent className={dropdownOpen ? 'open' : ''}>
-                    {firstTwoLinks}
-                    {lastTwoLinks}
+                    <DropButton
+                        onClick={() => setDropdownOpen(!dropdownOpen)}
+                        className={dropdownOpen ? 'open' : ''}
+                    >
+                        &#9776;
+                    </DropButton>
+                    <DropdownContent className={dropdownOpen ? 'open' : ''}>
+                        {firstTwoLinks}
+                        {lastTwoLinks}
                     </DropdownContent>
                 </Dropdown>
             )}

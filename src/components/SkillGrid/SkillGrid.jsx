@@ -1,26 +1,44 @@
 import { Grid, GridContainer } from './style';
 
-const SkillGrid = () => {
-    const rowOne = ['MongoDB', 'Express', 'Node.js', 'Springboot'];
-    const rowThree = ['React.js', 'CSS', 'jQuery', 'Angular'];
+const SkillGrid = ({ visibleSkills }) => {
+    const optionOne = visibleSkills === 1 || visibleSkills === 4
+    ? 'visible'
+    : 'skill'
+    const optionTwo = visibleSkills === 2 || visibleSkills === 4
+    ? 'visible'
+    : 'skill'
+    const optionThree = visibleSkills === 3 || visibleSkills === 4
+    ? 'visible'
+    : 'skill'
 
     return (
         <GridContainer>
             <Grid>
                 <div id='row-one'>
-                    {rowOne.map((skill, index) => (
-                        <p key={index}>{skill}</p>
-                    ))}
+                    <p
+                        className={optionOne
+                        }
+                    >
+                        Express
+                    </p>
+                    <p className={optionTwo}>MongoDB</p>
+                    <p className={optionTwo}>Node.js</p>
+                    <p className={
+                            visibleSkills === 1 || visibleSkills === 4
+                                ? 'visible'
+                                : 'skill'
+                        }>Springboot</p>
                 </div>
                 <div id='row-two'>
-                    <p>Typescript</p>
-                    <p>Full Stack Developer</p>
-                    <p>Java</p>
+                    <p className={optionThree}>Typescript</p>
+                    <p id='cert'>Full Stack Developer</p>
+                    <p className={optionThree}>Java</p>
                 </div>
                 <div id='row-three'>
-                    {rowThree.map((skill, index) => (
-                        <p key={index}>{skill}</p>
-                    ))}
+                    <p className={optionOne}>React.js</p>
+                    <p className={optionTwo}>CSS</p>
+                    <p className={optionTwo}>Redux</p>
+                    <p className={optionOne}>Angular</p>
                 </div>
             </Grid>
         </GridContainer>

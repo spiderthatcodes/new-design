@@ -14,25 +14,32 @@ export const Grid = styled.div`
     display: grid;
     grid-template-rows: 14vh 18vh 14vh;
 
-    #row-one {
-        background-color: blue;
-    }
-
     #row-two {
-        background-color: purple;
         display: grid;
         grid-template-columns: 20% 60% 20%;
         text-align: center;
         align-items: center;
     }
 
-    #row-three {
-        background-color: green;
-    }
-
     #row-one, #row-three {
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+
+    #cert {
+        font-size: 64px;
+        color: ${colors.peach};
+    }
+
+    .skill {
+        color: ${colors.black};
+        font-size: 32px;
+    }
+
+    .visible {
+        color: ${colors.white};
+        text-shadow: 0px 0px 8px ${colors.tan};
+        font-size: 38px;
     }
 `;

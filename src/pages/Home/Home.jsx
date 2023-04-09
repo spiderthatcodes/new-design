@@ -8,7 +8,7 @@ const Home = ({ isMobile }) => {
     const introduction = "Hello, I'm Jessica.";
 
     const handleMouse = (index) => {
-        if (index === 0) {
+        if (index === 0 || index === 7 || index === 11) {
             setVisibleSkills(1);
         } else if (index % 2 === 0) {
             setVisibleSkills(2);
@@ -18,21 +18,28 @@ const Home = ({ isMobile }) => {
     };
 
     return (
-        <Layout isMobile={isMobile}>
+        <Layout
+            isMobile={isMobile}
+            setVisibleSkills={setVisibleSkills}
+        >
             <Container isMobile={isMobile}>
                 <p id='intro'>
                     {introduction.split('').map((char, index) => (
                         <span
                             key={index}
+                            onMouseLeave={() => setVisibleSkills(0)}
                             onMouseOver={() => handleMouse(index)}
                         >
                             {char}
                         </span>
                     ))}
                 </p>
-                {!isMobile && <SkillGrid />}
+                {!isMobile && <SkillGrid visibleSkills={visibleSkills} />}
             </Container>
-            <ButtonBox onMouseOver={() => setVisibleSkills(4)}>
+            <ButtonBox
+                onMouseLeave={() => setVisibleSkills(0)}
+                onMouseOver={() => setVisibleSkills(4)}
+            >
                 <Button onClick={() => console.log('click')}>
                     More Info &#8658;
                 </Button>

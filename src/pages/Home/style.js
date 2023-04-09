@@ -19,14 +19,6 @@ export const Container = styled.div`
         text-shadow: 0px 0px 12px ${colors.white};
     }
 
-    .skill {
-        color: ${colors.black};
-    }
-
-    .skill:hover {
-        color: ${colors.white};
-        text-shadow: 0px 0px 12px ${colors.white};
-    }
 `;
 
 export const ButtonBox = styled.div`
