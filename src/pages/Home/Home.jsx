@@ -23,17 +23,29 @@ const Home = ({ isMobile }) => {
             setVisibleSkills={setVisibleSkills}
         >
             <Container isMobile={isMobile}>
-                <p id='intro'>&#8594;
-                    {introduction.split('').map((char, index) => (
-                        <span
-                            key={index}
-                            onMouseLeave={() => setVisibleSkills(0)}
-                            onMouseOver={() => handleMouse(index)}
-                        >
-                            {char}
-                        </span>
-                    ))}
-                </p>
+                {!isMobile ? (
+                    <p id='intro'>
+                        &#8594;
+                        {introduction.split('').map((char, index) => (
+                            <span
+                                key={index}
+                                onMouseLeave={() => setVisibleSkills(0)}
+                                onMouseOver={() => handleMouse(index)}
+                            >
+                                {char}
+                            </span>
+                        ))}
+                    </p>
+                ) : (
+                    <>
+                        <div id='lineOne'>
+                            <p className='mobileIntro'>Hello,</p>
+                            <p className='mobileIntro2'>I'm Jessica.</p>
+                        </div>
+                        <p className='mobileCert'>Full Stack</p>
+                        <p className='mobileCert'>Developer</p>
+                    </>
+                )}
                 {!isMobile && <SkillGrid visibleSkills={visibleSkills} />}
             </Container>
             <ButtonBox

@@ -46,7 +46,7 @@ export const DropdownContent = styled.div`
     display: none;
     position: absolute;
     right: 0;
-    background-color: ${colors.white};
+    background-color: ${colors.black};
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -55,8 +55,8 @@ export const DropdownContent = styled.div`
     }
 
     a {
-        color: black;
-        padding: 12px 16px;
+        color: ${colors.tan};;
+        padding: 10px 16px;
         text-align: center;
         text-decoration: none;
         display: block;
