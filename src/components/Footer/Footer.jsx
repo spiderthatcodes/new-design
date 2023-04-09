@@ -1,13 +1,13 @@
 import React from 'react';
-import { Container, Links, Wrapper } from './style';
 import linkedin from '../../resources/linkedin.png';
 import github from '../../resources/github.png';
+import { Container, Links, Wrapper } from './style';
 
-const Footer = () => {
+const Footer = ({ isMobile }) => {
     return (
         <Wrapper>
-            <Container>
-                <p>jessicaldickerson@outlook.com</p>
+            <Container isMobile={isMobile}>
+                {!isMobile && <p>jessicaldickerson@outlook.com</p>}
                 <Links>
                     <a
                         href='https://www.linkedin.com/in/jessica-lynn-dickerson/'

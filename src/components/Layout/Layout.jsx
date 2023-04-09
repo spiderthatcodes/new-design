@@ -1,7 +1,8 @@
 import React from 'react';
 import Nav from '../Nav/Nav';
-import { Container, Content } from './style';
 import Footer from '../Footer/Footer';
+import { Container, Content } from './style';
+
 
 const Layout = ({ children, isMobile }) => {
     return (

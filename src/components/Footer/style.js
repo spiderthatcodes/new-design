@@ -7,6 +7,8 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: ${props => props.isMobile ? '8px' : '2px'};
+    background-color: ${colors.black};
 
     p {
         color: ${colors.white};

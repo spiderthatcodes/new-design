@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import './style.css'
 
 const App = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -26,7 +28,7 @@ const App = () => {
         />
         <Route
             path='/about'
-            element={<Home isMobile={isMobile} />}
+            element={<About isMobile={isMobile} />}
         />
         <Route
             path='/work'
