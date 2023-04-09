@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Layout from '../../components/Layout/Layout';
-import { Container, Button, ButtonBox } from './style';
 import SkillGrid from '../../components/SkillGrid/SkillGrid';
+import { Container, Button, ButtonBox } from './style';
 
 const Home = ({ isMobile }) => {
     const [visibleSkills, setVisibleSkills] = useState(0);

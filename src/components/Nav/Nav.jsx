@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import alternate from '../../resources/alternate.png';
 import {
     Container,
@@ -11,6 +11,23 @@ import {
 
 const Nav = ({ isMobile, setVisibleSkills }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const location = useLocation();
+
+    const logoVersion =
+        location.pathname === '/' ? (
+            <Logo
+                onMouseLeave={() => setVisibleSkills(0)}
+                onMouseOver={() => setVisibleSkills(4)}
+                src={alternate}
+                alt='J.D.'
+            />
+        ) : (
+            <Logo
+                src={alternate}
+                alt='J.D.'
+            />
+        );
+
     const firstTwoLinks = (
         <>
             <Link to='/'>Home</Link>
@@ -26,12 +43,7 @@ const Nav = ({ isMobile, setVisibleSkills }) => {
     return (
         <Container className={isMobile ? 'mobile' : ''}>
             {!isMobile && firstTwoLinks}
-            <Logo
-                onMouseLeave={() => setVisibleSkills(0)}
-                onMouseOver={() => setVisibleSkills(4)}
-                src={alternate}
-                alt='J.D.'
-            />
+            {logoVersion}
             {isMobile && (
                 <Dropdown className={dropdownOpen ? 'open' : ''}>
                     <DropButton
