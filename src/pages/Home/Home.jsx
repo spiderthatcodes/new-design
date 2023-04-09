@@ -23,7 +23,7 @@ const Home = ({ isMobile }) => {
             setVisibleSkills={setVisibleSkills}
         >
             <Container isMobile={isMobile}>
-                <p id='intro'>
+                <p id='intro'>&#8594;
                     {introduction.split('').map((char, index) => (
                         <span
                             key={index}

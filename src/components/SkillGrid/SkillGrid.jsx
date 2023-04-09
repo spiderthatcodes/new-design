@@ -31,7 +31,7 @@ const SkillGrid = ({ visibleSkills }) => {
                 </div>
                 <div id='row-two'>
                     <p className={optionThree}>Typescript</p>
-                    <p id='cert'>Full Stack Developer</p>
+                    <p id='cert'>A Full Stack Developer</p>
                     <p className={optionThree}>Java</p>
                 </div>
                 <div id='row-three'>
