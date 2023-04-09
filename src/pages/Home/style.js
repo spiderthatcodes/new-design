@@ -21,7 +21,7 @@ export const Container = styled.div`
 
     .mobileIntro, .mobileIntro2 {
         color: ${colors.peach};
-        font-size: 46px;
+        font-size: 72px;
         padding: 12px 38px;
         line-height: 24px;
         z-index: 1;
@@ -39,6 +39,7 @@ export const Container = styled.div`
 
     .mobileIntro2 {
         padding: 16px 56px;
+        font-size: 52px;
     }
 
     #lineOne {
