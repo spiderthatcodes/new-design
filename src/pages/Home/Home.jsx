@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Layout from '../../components/Layout/Layout';
 import SkillGrid from '../../components/SkillGrid/SkillGrid';
 import { Container, Button, ButtonBox } from './style';
 
 const Home = ({ isMobile }) => {
     const [visibleSkills, setVisibleSkills] = useState(0);
+    const navigate = useNavigate();
     const introduction = "Hello, I'm Jessica.";
 
     const handleMouse = (index) => {
@@ -52,7 +54,7 @@ const Home = ({ isMobile }) => {
                 onMouseLeave={() => setVisibleSkills(0)}
                 onMouseOver={() => setVisibleSkills(4)}
             >
-                <Button onClick={() => console.log('click')}>
+                <Button onClick={() => navigate('/about')}>
                     More Info &#8658;
                 </Button>
             </ButtonBox>
