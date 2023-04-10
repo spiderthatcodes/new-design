@@ -15,8 +15,8 @@ export const Container = styled.div`
 
     span:hover {
         color: ${colors.white};
-        font-size: 88px;
-        text-shadow: 0px 0px 12px ${colors.white};
+        font-size: 102px;
+        text-shadow: 0px 0px 12px ${colors.accent};
     }
 
     .mobileIntro, .mobileIntro2 {

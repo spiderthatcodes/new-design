@@ -39,7 +39,7 @@ export const Grid = styled.div`
 
     .visible {
         color: ${colors.white};
-        text-shadow: 0px 0px 8px ${colors.tan};
+        text-shadow: 0px 0px 8px ${colors.accent};
         font-size: 38px;
     }
 `;

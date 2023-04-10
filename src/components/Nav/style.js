@@ -24,7 +24,7 @@ export const Container = styled.div`
     }
 
     a:hover {
-        text-shadow: 0px 0px 15px ${colors.peach};
+        text-shadow: 0px 0px 15px rgba(2, 128, 144, 0.49);
     }
 `;
 
